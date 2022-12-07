@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "044dcaa6-03c7-4379-bce9-c76a37f4f8b0",
+		"name": "TrackIt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8378638"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\" : \"Rahul\",\n    \"password\" : \"aba@xyz123\",\n    \"confirmPassword\" : \"aba@xyz123\",\n    \"email\": \"abc123@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Project 3: Social Media App..test\",\n    \"description\": \"To build a social media app with several basic features common among the leading social media platforms like Facebook and Twitter.\",\n    \"startDate\": \"2023-02-07T12:43:32.171Z\",\n    \"endDate\": \"2023-07-07T12:43:32.171Z\",\n    \"adminUser\": \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\",\n    \"users\": [\"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\", \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\"],\n    \"taskIds\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/projects/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Projects",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project Admin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Registered Users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/projects/b6daf6bb-0748-48af-89ee-3c4c7517e3ab?isProjectAdmin=false",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"b6daf6bb-0748-48af-89ee-3c4c7517e3ab"
+					],
+					"query": [
+						{
+							"key": "isProjectAdmin",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskName\": \"Create Modal form for Task\",\n    \"projectId\": \"218c7b62-6a6e-44b8-957c-b9ebc865532c\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"dueDate\": \"2023-02-07T12:43:32.171Z\",\n    \"taskStatus\": [\"CREATED\"],\n    \"taskLabel\": [\"FEATURE\"],\n    \"taskCreatedBy\": \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\",\n    \"taskAssignedTo\": \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\",\n    \"lastModifiedBy\": \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/projects/218c7b62-6a6e-44b8-957c-b9ebc865532c/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"218c7b62-6a6e-44b8-957c-b9ebc865532c",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Project",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"0aea4475-a79d-4cc5-80ad-63c908c4214b\",\n    \"title\": \"Project 3: Social Media App\",\n    \"description\": \"To build a social media app with several basic features common among the leading social media platforms like Facebook and Twitter.\",\n    \"startDate\": \"2023-02-07T12:43:32.171Z\",\n    \"endDate\": \"2023-07-07T12:43:32.171Z\",\n    \"adminUser\": \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\",\n    \"users\": [\n        \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\",\n        \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\",\n        \"9cc8d59a-2c06-4490-98af-6165b46131cc\"\n    ],\n    \"taskIds\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/projects/0aea4475-a79d-4cc5-80ad-63c908c4214b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"0aea4475-a79d-4cc5-80ad-63c908c4214b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users by Project ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks by Project ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get user tasks by Project ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Project Task",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project task",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User from Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/projects/:projectId/users/:userId?isPro",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						":projectId",
+						"users",
+						":userId"
+					],
+					"query": [
+						{
+							"key": "isPro",
+							"value": null
+						}
+					],
+					"variable": [
+						{
+							"key": "projectId",
+							"value": null
+						},
+						{
+							"key": "userId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

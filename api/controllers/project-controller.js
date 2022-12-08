@@ -2,6 +2,7 @@ import * as projectService from '../services/project-service.js';
 import { validatePayload, validateId } from "../utils/common.js"
 import { v4 as uuidv4 } from 'uuid';
 
+// API Controller to fetch all the projects.
 export const getAllProjects = async (req, res) => {
     try {
         const projectList = await projectService.getProjectList(); // call to service layer
@@ -12,6 +13,7 @@ export const getAllProjects = async (req, res) => {
     }
 }
 
+// API Controller to delete a Project, given its ID and user admin flag.
 export const deleteProjectById = async (req, res) => {
     try {
         const { projectId } = req.params
@@ -32,6 +34,7 @@ export const deleteProjectById = async (req, res) => {
     }
 }
 
+// API Controller to get admin user of a given Project.
 export const getAdminById = async (req, res) => {
 
     try {
@@ -48,6 +51,7 @@ export const getAdminById = async (req, res) => {
     }
 }
 
+// API Controller to create a Project.
 export const createProject = async (req, res) => {
     try {
         let projectId = uuidv4()
@@ -64,6 +68,8 @@ export const createProject = async (req, res) => {
     }
 }
 
+
+// API Controller to update a Project.
 export const updateProject = async (req, res) => {
     try {
         const { projectId } = req.params
@@ -85,6 +91,7 @@ export const updateProject = async (req, res) => {
     }
 }
 
+// API Controller to get all Users of a given project. 
 export const getAllUsersByProjectId = async (req, res) => {
     try {
         const { projectId } = req.params
@@ -97,6 +104,7 @@ export const getAllUsersByProjectId = async (req, res) => {
     }
 }
 
+// API Controller to delete user from a given project. 
 export const removeUserFromProject = async (req, res) => {
     try {
         const { projectId, userId } = req.params
@@ -120,6 +128,7 @@ export const removeUserFromProject = async (req, res) => {
     }
 }
 
+// API Controller to get all tasks from a given project.
 export const getAllTasksByProjectId = async (req, res) => {
     try {
         const { projectId } = req.params
@@ -133,6 +142,7 @@ export const getAllTasksByProjectId = async (req, res) => {
     }
 }
 
+// API Controller to get all tasks of a particular user, from a given project.
 export const getAllUserTasksByProjectId = async (req, res) => {
     try {
         const { projectId, userId } = req.params
@@ -146,6 +156,7 @@ export const getAllUserTasksByProjectId = async (req, res) => {
     }
 }
 
+// API Controller to get all task status and their counts.
 export const getTasksAnalytics = async (req, res) => {
     try {
         const { projectId } = req.params
@@ -158,6 +169,7 @@ export const getTasksAnalytics = async (req, res) => {
     }
 }
 
+// API Controller to get all user task status and their counts.
 export const getUserTasksAnalytics = async (req, res) => {
     try {
         const { projectId, userId } = req.params
@@ -172,6 +184,7 @@ export const getUserTasksAnalytics = async (req, res) => {
 }
 
 
+// API Controller to create a new Task in a given project.
 export const createTask = async (req, res) => {
     try {
         const { projectId } = req.params
@@ -191,6 +204,7 @@ export const createTask = async (req, res) => {
 
 }
 
+// API Controller to delete a Task in a given project.
 export const deleteTask = async (req, res) => {
     try {
         const { projectId, taskId } = req.params
@@ -208,6 +222,7 @@ export const deleteTask = async (req, res) => {
 
 }
 
+// API Controller to update a Task in a given project.
 export const updateTask = async (req, res) => {
 
     try {

@@ -86,7 +86,20 @@
 			"name": "Get Registered Users",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -124,7 +137,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"taskName\": \"Create Modal form for Task\",\n    \"projectId\": \"218c7b62-6a6e-44b8-957c-b9ebc865532c\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"dueDate\": \"2023-02-07T12:43:32.171Z\",\n    \"taskStatus\": [\"CREATED\"],\n    \"taskLabel\": [\"FEATURE\"],\n    \"taskCreatedBy\": \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\",\n    \"taskAssignedTo\": \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\",\n    \"lastModifiedBy\": \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\"\n}",
+					"raw": "{\n    \"taskName\": \"Creating Task 11 for Web design Project\",\n    \"projectId\": \"218c7b62-6a6e-44b8-957c-b9ebc865532c\",\n    \"description\": \"..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"dueDate\": \"2023-03-07T12:43:32.171Z\",\n    \"taskStatus\": [\"IN_PROGRESS\"],\n    \"taskLabel\": [\"BUG\"],\n    \"taskCreatedBy\": \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\",\n    \"taskAssignedTo\": \"98f3dfaf-7bf6-4670-9194-250e9b8c1ca1\",\n    \"lastModifiedBy\": \"8d9e8c42-74c4-46d7-bb9d-e249e831dda7\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -254,6 +267,62 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Task status counts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Task Status Counts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Validate User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update user profile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task Analytics",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Task Analytics",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}

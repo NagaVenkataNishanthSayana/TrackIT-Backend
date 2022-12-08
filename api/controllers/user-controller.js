@@ -7,12 +7,7 @@ import otpHandler from "../utils/emailVerification/OTPHandler.js";
 
 let token;
 
-//health
-export const healthCheck= async(req,res) =>{
-    res.status(200).send({"message":"Service is Healthy"});
-}
-
-//Function Retrieve all users
+// API Controller to get all the registered users in the system.
 export const getAllRegisteredUsers = async (req, res) => {
     try {
         const registeredUsers = await userService.getRegisteredUsers();
